@@ -5,15 +5,15 @@ var vars3={};
 function cat(city,index){
 
 if(index==0){
-var queryIndexCat='select * from html where url="http://qatar.dubizzle.com/ar/'+city+'/cars/search/';
+var queryIndexCat='http://qatar.dubizzle.com/ar/'+city+'/cars/search/';
 	}else if(index==1){
-var queryIndexCat='select * from html where url="http://qatar.dubizzle.com/ar/'+city+'/items-for-sale/search/';
+var queryIndexCat='http://qatar.dubizzle.com/ar/'+city+'/items-for-sale/search/';
 	}else if(index==2){
-var queryIndexCat='select * from html where url="http://qatar.dubizzle.com/ar/'+city+'/property-for-rent/search/';
+var queryIndexCat='http://qatar.dubizzle.com/ar/'+city+'/property-for-rent/search/';
 	}else if(index==3){
-var queryIndexCat='select * from html where url="http://qatar.dubizzle.com/ar/'+city+'/property-for-sale/search/';
+var queryIndexCat='http://qatar.dubizzle.com/ar/'+city+'/property-for-sale/search/';
 	}else if(index==4){
-var queryIndexCat='select * from html where url="http://qatar.dubizzle.com/ar/'+city+'/jobs/search/';
+var queryIndexCat='http://qatar.dubizzle.com/ar/'+city+'/jobs/search/';
 	}	
 
 var xhr = Titanium.Network.createHTTPClient();
