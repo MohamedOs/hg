@@ -5,82 +5,43 @@ var vars3={};
 function cat(city,index){
 
 if(index==0){
-var queryIndexCat='select * from html where url="http://qatar.dubizzle.com/ar/'+city+'/cars/search/" and xpath="//*[@class=\'d-nav__cat d-nav__cat--show\']"';
+var queryIndexCat='select * from html where url="http://qatar.dubizzle.com/ar/'+city+'/cars/search/';
 	}else if(index==1){
-var queryIndexCat='select * from html where url="http://qatar.dubizzle.com/ar/'+city+'/items-for-sale/search/?diagnostics=true" and xpath="//*[@class=\'d-nav__cat d-nav__cat--show\']"';
+var queryIndexCat='select * from html where url="http://qatar.dubizzle.com/ar/'+city+'/items-for-sale/search/';
 	}else if(index==2){
-var queryIndexCat='select * from html where url="http://qatar.dubizzle.com/ar/'+city+'/property-for-rent/search/?diagnostics=true" and xpath="//*[@class=\'d-nav__cat d-nav__cat--show\']"';
+var queryIndexCat='select * from html where url="http://qatar.dubizzle.com/ar/'+city+'/property-for-rent/search/';
 	}else if(index==3){
-var queryIndexCat='select * from html where url="http://qatar.dubizzle.com/ar/'+city+'/property-for-sale/search/?diagnostics=true" and xpath="//*[@class=\'d-nav__cat d-nav__cat--show\']"';
+var queryIndexCat='select * from html where url="http://qatar.dubizzle.com/ar/'+city+'/property-for-sale/search/';
 	}else if(index==4){
-var queryIndexCat='select * from html where url="http://qatar.dubizzle.com/ar/'+city+'/jobs/search/?diagnostics=true" and xpath="//*[@class=\'d-nav__cat d-nav__cat--show\']"';
+var queryIndexCat='select * from html where url="http://qatar.dubizzle.com/ar/'+city+'/jobs/search/';
 	}	
 
+var xhr = Titanium.Network.createHTTPClient();
+xhr.onload = function() { 
+var select = soupselect.select;
 
-  Titanium.Yahoo.yql(queryIndexCat, function(etCat){
-  //	Ti.API.info(etCat.data);
-  	vars3.data=etCat.data;
-	
-function getObjects(obj, key, val) {
-    var objects = [];
-    for (var i in obj) {
-        if (!obj.hasOwnProperty(i)) continue;
-        if (typeof obj[i] == 'object') {
-            objects = objects.concat(getObjects(obj[i], key, val));    
-        } else 
-        //if key matches and value matches or if key matches and value is not passed (eliminating the case where key matches but passed value does not)
-        if (i == key && obj[i] == val || i == key && val == '') { //
-            objects.push(obj);
-        } else if (obj[i] == val && key == ''){
-            //only add if the object is not already in the array
-            if (objects.lastIndexOf(obj) == -1){
-                objects.push(obj);
-            }
-        }
-    }
-    return objects;
-}
- 
-//return an array of values that match on a certain key
-function getValues(obj, key) {
-    var objects = [];
-    for (var i in obj) {
-        if (!obj.hasOwnProperty(i)) continue;
-        if (typeof obj[i] == 'object') {
-            objects = objects.concat(getValues(obj[i], key));
-        } else if (i == key) {
-            objects.push(obj[i]);
-        }
-    }
-    return objects;
-}
- 
-//return an array of keys that match on a certain value
-function getKeys(obj, val) {
-    var objects = [];
-    for (var i in obj) {
-        if (!obj.hasOwnProperty(i)) continue;
-        if (typeof obj[i] == 'object') {
-            objects = objects.concat(getKeys(obj[i], val));
-        } else if (obj[i] == val) {
-            objects.push(i);
-        }
-    }
-    return objects;
-}
-  
-var dsCats = vars3.data;
-       
-vars3.d1=(getObjects(dsCats,'class','d-nav__txt'));    
-vars3.d2=(getObjects(dsCats,'class','d-nav__name'));   
-for (var i=0;i<vars3.d1.length;i++) {
-arr3.push({
-        title:vars3.d1[i].content,
-        href:vars3.d2[i].href,
-    });
-}
-
-
-//Ti.API.info(arr3);
+var body=xhr.responseText;
+var handler = new htmlparser.DefaultHandler(function(err, dom) {
+	if (err) {
+		alert('Error: ' + err);
+	} else {
+		vars3.data=select(dom,'ul.d-nav__cat.d-nav__cat--show .d-nav__item a');
+		var listHref=select(dom,'ul.d-nav__cat.d-nav__cat--show .d-nav__item a');
+         for(var i=2;i<listHref.length;i++){
+         	arr3.push({
+                 title:listHref[i].children[5].children[0].data,
+                 href:listHref[i].attribs.href,
+                  });
+         }
+	}
 });
+var parser = new htmlparser.Parser(handler);
+parser.parseComplete(body);
+};
+xhr.onerror = function() {
+    Titanium.API.info('error');
+};
+xhr.open("GET",queryIndexCat);
+xhr.send();
+
 }
