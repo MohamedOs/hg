@@ -51,7 +51,7 @@ objects.push(i);
 return objects;
 }
 var ds7 = vars7.data;
-vars7.d1=(getObjects(ds7,'class','avatar'));
+/*vars7.d1=(getObjects(ds7,'class','avatar'));
 vars7.d2=(getObjects(ds7,'class','tweet-text'));
 for(var i=0;i<vars7.d2.length;i++){
 arr7.push({
@@ -59,7 +59,7 @@ image:vars7.d1[0].a.img.src,
 title:vars7.d1[0].a.img.alt,
 content:vars7.d2[0].div.p.content,
 });	
-}
+}*/
 
 }
 //Ti.API.info(arr7);
