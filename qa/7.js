@@ -1,8 +1,8 @@
 var arr7 = [];
 var vars7={};
-function pri7(priv,pageNumber){
+function pri7(){
 vars7.city=priv;
-var queryIndexF7='https://mobile.twitter.com/search?q=tahrirnews';
+var queryIndexF7='select * from html where url="https://mobile.twitter.com/search?q=tahrirnews" and xpath="//*[@class=\'tweet\']"';
 Titanium.Yahoo.yql(queryIndexF7, function(e){
 vars7.data=e.data;
 function getObjects(obj, key, val) {
