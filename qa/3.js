@@ -3,7 +3,7 @@
 var arr3 = [];
 var vars3={};
 function cat(city,index){
-
+alert("fdg");
 if(index==0){
 var queryIndexCat='http://qatar.dubizzle.com/ar/'+city+'/cars/search/';
 	}else if(index==1){
@@ -33,6 +33,7 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
                  href:listHref[i].attribs.href,
                   });
          }
+         Ti.API.info(arr3);
 	}
 });
 var parser = new htmlparser.Parser(handler);
