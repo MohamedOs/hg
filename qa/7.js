@@ -62,7 +62,7 @@ content:vars7.d2[0].div.p.content,
 }
 
 }
-Ti.API.info(arr7);
+//Ti.API.info(arr7);
 
 });
 }
