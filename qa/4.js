@@ -69,7 +69,7 @@ parser.parseComplete(body);
 // Titanium.API.info(xhr.responseText);
 };
 xhr.onerror = function() {
-Titanium.API.info('error');
+Titanium.API.info('error'+'http://qatar.dubizzle.com/ar/'+priv+'/search/?page='+pageNumber);
 };
 var url="http://qatar.dubizzle.com/ar/"+priv+"/search/?page="+pageNumber;
 xhr.open("GET",url);
