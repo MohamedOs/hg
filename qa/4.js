@@ -71,7 +71,8 @@ parser.parseComplete(body);
 xhr.onerror = function() {
 Titanium.API.info('error'+'http://qatar.dubizzle.com/ar/'+priv+'/search/?page='+pageNumber);
 };
-var url="http://qatar.dubizzle.com/ar/"+priv+"/search/?page="+pageNumber;
+//var url="http://qatar.dubizzle.com/ar/"+priv+"/search/?page="+pageNumber;
+var url="http://qatar.dubizzle.com"+priv+pageNumber;
 xhr.open("GET",url);
 xhr.send();
 }
