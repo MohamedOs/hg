@@ -1,7 +1,7 @@
 var arr4 = [];
 var vars4={};
 function pri4(priv7,pageNumber){
-var url="http://qatar.dubizzle.com/ar/"+priv7+"/search/?page="+pageNumber;
+var url="http://qatar.dubizzle.com"+priv7+pageNumber;
 //activityIndicatorCatt.show();
 vars4.city=priv7;
 var xhr = Titanium.Network.createHTTPClient();
