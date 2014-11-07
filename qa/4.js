@@ -1,10 +1,9 @@
-
 var arr4 = [];
 var vars4={};
-function pri4(priv,pageNumber){
-var url="http://qatar.dubizzle.com"+priv+pageNumber;
+function pri4(priv7,pageNumber){
+var url="http://qatar.dubizzle.com/ar/"+priv7+"/search/?page="+pageNumber;
 //activityIndicatorCatt.show();
-vars4.city=priv;
+vars4.city=priv7;
 var xhr = Titanium.Network.createHTTPClient();
 xhr.onload = function () {
 var select = soupselect.select;
@@ -72,7 +71,7 @@ parser.parseComplete(body);
 xhr.onerror = function() {
 Titanium.API.info('errorfhgdfgdf'+url);
 };
-//var url="http://qatar.dubizzle.com/ar/"+priv+"/search/?page="+pageNumber;
+//var url="http://qatar.dubizzle.com/ar/"+priv7+"/search/?page="+pageNumber;
 xhr.open("GET",url);
 xhr.send();
 }
