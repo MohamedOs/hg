@@ -2,7 +2,7 @@ var vars5={};
 var arr5 = [];
 var arrImg5=[];
 var arrContent5=[];
-function singlePost5(link){
+function singlePost5(nation,link){
 var contentVars5="";
 var adInfoVars5="";
 //activityIndicator.show();
