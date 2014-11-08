@@ -1,6 +1,6 @@
 var arr4 = [];
 var vars4={};
-function pri4(nation,priv,pageNumber){
+function pri4(nation,priv7,pageNumber){
 var url="http://"+nation+".dubizzle.com"+priv7+"?page="+pageNumber;
 //activityIndicatorCatt.show();
 vars4.city=priv7;
