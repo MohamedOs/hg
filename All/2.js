@@ -12,7 +12,7 @@ var vars2={};
 var arr2 = [];
 var arrImg=[];
 var arrContent=[];
-function singlePost(link){
+function singlePost(nation,link){
 var contentVars="";
 var adInfoVars="";
 //activityIndicator.show();
