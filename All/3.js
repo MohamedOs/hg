@@ -4,15 +4,15 @@ var arr3 = [];
 var vars3={};
 function cat(nation,city,eindex){
 //alert("fdg");
-if(index==0){
+if(eindex==0){
 var queryIndexCat='http://'+nation+'.dubizzle.com/ar/'+city+'/cars/search/';
-	}else if(index==1){
+	}else if(eindex==1){
 var queryIndexCat='http://'+nation+'.dubizzle.com/ar/'+city+'/items-for-sale/search/';
-	}else if(index==2){
+	}else if(eindex==2){
 var queryIndexCat='http://'+nation+'.dubizzle.com/ar/'+city+'/property-for-rent/search/';
-	}else if(index==3){
+	}else if(eindex==3){
 var queryIndexCat='http://'+nation+'.dubizzle.com/ar/'+city+'/property-for-sale/search/';
-	}else if(index==4){
+	}else if(eindex==4){
 var queryIndexCat='http://'+nation+'.dubizzle.com/ar/'+city+'/jobs/search/';
 	}	
 
