@@ -2,6 +2,7 @@ var arr7 = [];
 var vars7={};
 function pri7(nation){
 var queryIndexF7='select * from html where url="https://mobile.twitter.com/hashtag/harag_'+nation+'" and xpath="//*[@class=\'tweet\']"';
+alert(queryIndexF7);
 Titanium.Yahoo.yql(queryIndexF7, function(e){
 vars7.data=e.data;
 function getObjects(obj, key, val) {
