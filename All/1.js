@@ -30,8 +30,7 @@ borderRadius:7
 });*/
 var arr = [];
 var vars={};
-function pri(priv,pageNumber){
-	
+function pri(nation,priv,pageNumber){	
 //activityIndicatorCatt.show();
 vars.city=priv;
 
