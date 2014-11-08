@@ -2,7 +2,7 @@
     
 var arr3 = [];
 var vars3={};
-function cat(city,index){
+function cat(nation,city,eindex){
 //alert("fdg");
 if(index==0){
 var queryIndexCat='http://'+nation+'.dubizzle.com/ar/'+city+'/cars/search/';
