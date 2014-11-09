@@ -10,8 +10,10 @@ var queryIndexCat='http://jordan.dubizzle.com/ar/'+city+'/cars/search/';
 var queryIndexCat='http://jordan.dubizzle.com/ar/'+city+'/items-for-sale/search/';
 	}else if(index==2){
 var queryIndexCat='http://jordan.dubizzle.com/ar/'+city+'/property-for-rent/search/';
+alert(queryIndexCat);
 	}else if(index==3){
 var queryIndexCat='http://jordan.dubizzle.com/ar/'+city+'/property-for-sale/search/';
+alert(queryIndexCat);
 	}else if(index==4){
 var queryIndexCat='http://jordan.dubizzle.com/ar/'+city+'/jobs/search/';
 	}	
