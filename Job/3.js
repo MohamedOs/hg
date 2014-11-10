@@ -15,7 +15,7 @@ var itemsForSale=[{"title":"آلات موسيقية","href":"/ar/"+city+"/items-
  var jobsFor=[{"title":"إعلام","href":"/ar/"+city+"/jobs/media/search/"},{"title":"إنشاءات","href":"/ar/"+city+"/jobs/construction/search/"},{"title":"بنوك / مالية","href":"/ar/"+city+"/jobs/bankfinance/search/"},{"title":"تسوية / علاقات عامة","href":"/ar/"+city+"/jobs/marketingpr/search/"},{"title":"تطوير الأعمال","href":"/ar/"+city+"/jobs/business-development/search/"},{"title":"تعليم","href":"/ar/"+city+"/jobs/education/search/"},{"title":"تكنولوجيا المعلومات / إتصالات","href":"/ar/"+city+"/jobs/ittelecom/search/"},{"title":"توظيف / موارد بشرية","href":"/ar/"+city+"/jobs/hrrecruiting/search/"},{"title":"سكرتارية","href":"/ar/"+city+"/jobs/secretarial/search/"},{"title":"سياحة وفنادق وضيافة","href":"/ar/"+city+"/jobs/hospitality/search/"},{"title":"طب / صحة","href":"/ar/"+city+"/jobs/medicalhealth/search/"},{"title":"عمارة / هندسة","href":"/ar/"+city+"/jobs/architectureengineering/search/"},{"title":"عمل إداري","href":"/ar/"+city+"/jobs/executive/search/"},{"title":"عمل إستشاري","href":"/ar/"+city+"/jobs/consulting/search/"},{"title":"فنون / تصميم","href":"/ar/"+city+"/jobs/artdesign/search/"},{"title":"مبيعات","href":"/ar/"+city+"/jobs/sales/search/"},{"title":"محاسبة","href":"/ar/"+city+"/jobs/accounting/search/"},{"title":"محلات تجارية","href":"/ar/"+city+"/jobs/retail/search/"},{"title":"نفط / غاز","href":"/ar/"+city+"/jobs/oilgas/search/"},{"title":"وظائف اخرى","href":"/ar/"+city+"/jobs/other-jobs/search/"},{"title":"يبحث عن عمل","href":"/ar/"+city+"/jobs/jobs-wanted/search/"}];
 
 vars3.data=city;
-arr3=carsFor;
+arr3=jobsFor;
 
 
 }
