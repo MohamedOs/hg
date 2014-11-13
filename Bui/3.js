@@ -3,7 +3,9 @@
 var arr3 = [];
 var vars3={};
 function cat(nation,city,eindex){
-	
+if(city.length<2){
+  city="/";
+}	
   
 var propertyForRent=[{"title":" غرف للإيجار (مشاركة سكن)","href":"/ar/"+city+"/property-for-rent/rooms-for-rent/search/"},{"title":"شاليهات / شقق سياحية","href":"/ar/"+city+"/property-for-rent/vacation-rentals/search/"},{"title":"شقة للإيجار","href":"/ar/"+city+"/property-for-rent/apartments-for-rent/search/"},{"title":"عقار تجارى للإيجار","href":"/ar/"+city+"/property-for-rent/commercial-for-rent/search/"},{"title":"فيلا للإيجار","href":"/ar/"+city+"/property-for-rent/villas-for-rent/search/"},{"title":"مطلوب للإيجار","href":"/ar/"+city+"/property-for-rent/rentals-wanted/search/"}];
  
