@@ -86,16 +86,18 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 		placeVar=placeVar.trim();
 		dateVar=carsFor[i].title;
 		dateVar=dateVar.trim();
-		 arr.push({
+		 /*arr.push({
                   image:imageVar,
                   title:titleVar,
                   href:hrefVar,
                   price:priceVar,
                   place:"",
                   date:""
-                });	
+                });*/	
 	//		
 		}
+		arr=[{"image":"image,"title":"title,"href":"href,"price":"price,"place":"place","date","date"}]
+
 		Ti.API.info(arr);
 		// activityIndicatorCatt.hide();
 	
