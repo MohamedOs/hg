@@ -45,19 +45,19 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 	if (err) {
 		alert('Error: ' + err);
 	} else {
-		vars.data=select(dom,'a.d-listing__name');
+		vars.data=select(dom,'a.detailsLink');
 		var ds = vars.data;
 		var photos=select(dom,'img.fleft');
 		//Ti.API.info(photos[0].attribs.src);
 		var titles=select(dom,'a.detailsLink');
 		//Ti.API.info(titles[0].children[0].data);
-		var prices=select(dom,'div.d-listing__amount');
+		var prices=select(dom,'p.price');
 		//Ti.API.info(prices[0].children[0].data);
-		var hrefs=select(dom,'a.d-listing__name');
+		var hrefs=select(dom,'a.detailsLink');
 		//Ti.API.info(hrefs[0].attribs.href);
-		var places=select(dom,'div.d-listing__meta');
+		var places="";
 		//Ti.API.info(places[0].children[1].children[0].data+' - '+places[0].children[3].children[0].data);
-		var dates=select(dom,'span.d-listing__date');
+		var dates="";
 		//Ti.API.info(dates[0].children[0].data);
 		
 		for (var i=0;i<titles.length;i++) {
@@ -89,8 +89,8 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
                   title:titleVar,
                   href:hrefVar,
                   price:priceVar,
-                  place:placeVar,
-                  date:dateVar
+                  place:"",
+                  date:""
                 });	
 	//		
 		}
