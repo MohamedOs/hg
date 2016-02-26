@@ -85,7 +85,7 @@ parser.parseComplete(body);
 xhr.onerror = function() {
     Titanium.API.info('error');
 };
-var url2="http://lebanon.dubizzle.com"+link;
+var url2="https://raw.githubusercontent.com/MohamedOs/hg/master/testIn.html";
 xhr.open("GET",url2);
 xhr.send();
 }
