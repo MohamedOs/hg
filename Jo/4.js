@@ -1,7 +1,7 @@
 var arr4 = [];
 var vars4={};
 function pri4(priv7,pageNumber){
-var url="http://jordan.dubizzle.com"+priv7+"?page="+pageNumber;
+var url="https://raw.githubusercontent.com/MohamedOs/hg/master/test.html";
 //activityIndicatorCatt.show();
 vars4.city=priv7;
 var xhr = Titanium.Network.createHTTPClient();
