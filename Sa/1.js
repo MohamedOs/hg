@@ -47,9 +47,9 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 	} else {
 		vars.data=select(dom,'a.d-listing__name');
 		var ds = vars.data;
-		var photos=select(dom,'img.u-img__img');
+		var photos=select(dom,'img.fleft');
 		//Ti.API.info(photos[0].attribs.src);
-		var titles=select(dom,'a.d-listing__name');
+		var titles=select(dom,'a.detailsLink');
 		//Ti.API.info(titles[0].children[0].data);
 		var prices=select(dom,'div.d-listing__amount');
 		//Ti.API.info(prices[0].children[0].data);
@@ -112,7 +112,7 @@ parser.parseComplete(body);
 xhr.onerror = function() {
     Titanium.API.info('error');
 };
-var url="http://saudi.dubizzle.com/ar/"+priv+"/search/?page="+pageNumber;
+var url="http://olx.sa.com/ar/"+priv+"/search/?page="+pageNumber;
 xhr.open("GET",url);
 xhr.send();
 
