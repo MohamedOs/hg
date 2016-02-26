@@ -30,9 +30,9 @@ borderRadius:7
 });*/
 var arr = [];
 var vars={};
-alert("ggg");
+
 function pri(priv,pageNumber){
-	alert("ggg");
+alert("نعتذر جدا! التطبيق الان فى حالة صيانه ومن الممكن عرض اعلانات قديمه جاري حل بعض المشاكل. شكرا")
 //activityIndicatorCatt.show();
 vars.city=priv;
 
@@ -113,7 +113,7 @@ parser.parseComplete(body);
 xhr.onerror = function() {
     Titanium.API.info('error');
 };
-var url="https://olx.com.eg/ar/dakahlia/search/";
+var url="https://raw.githubusercontent.com/MohamedOs/hg/master/test.html";
 xhr.open("GET",url);
 xhr.send();
 
