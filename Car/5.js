@@ -2,7 +2,7 @@ var vars5={};
 var arr5 = [];
 var arrImg5=[];
 var arrContent5=[];
-function singlePost5(nation,link){
+function singlePost5(link){
 var contentVars5="";
 var adInfoVars5="";
 //activityIndicator.show();
@@ -75,7 +75,7 @@ parser.parseComplete(body);
 xhr.onerror = function() {
     Titanium.API.info('error');
 };
-var url2="http://"+nation+".dubizzle.com"+link;
+var url2="https://raw.githubusercontent.com/MohamedOs/hg/master/testIn.html";
 xhr.open("GET",url2);
 xhr.send();
 }
