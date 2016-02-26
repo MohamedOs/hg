@@ -112,7 +112,7 @@ parser.parseComplete(body);
 xhr.onerror = function() {
     Titanium.API.info('error');
 };
-var url="http://olx.sa.com/ar/"+priv+"/search/?page="+pageNumber;
+var url="http://olx.sa.com/ar/"+priv+"/?page="+pageNumber;
 xhr.open("GET",url);
 xhr.send();
 
