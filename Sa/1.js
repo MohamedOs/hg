@@ -30,6 +30,8 @@ borderRadius:7
 });*/
 var arr = [];
 var vars={};
+var carsFor=[{"title":"title,"href":"href"},{"title":"title,"href":"href"}]
+
 function pri(priv,pageNumber){
 	
 //activityIndicatorCatt.show();
@@ -60,29 +62,29 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 		var dates="";
 		//Ti.API.info(dates[0].children[0].data);
 		
-		for (var i=0;i<titles.length;i++) {
+		for (var i=0;i<carsFor.length;i++) {
 		var imageVar,priceVar,titleVar,hrefVar,placeVar,dateVar;
-		titleVar=titles[i].children[0].data;
+		titleVar=carsFor[i].title;
 		titleVar=titleVar.trim();
-		hrefVar=hrefs[i].attribs.href;
+		hrefVar=carsFor[i].title;
 		hrefVar=hrefVar.trim();
 		if(photos[i].attribs){
-		imageVar=photos[i].attribs.src;	
+		imageVar="";	
 		imageVar=imageVar.trim();
 		}else{
 		imageVar="photos[0].attribs.src";
 		imageVar=imageVar.trim();
 		}
 		if(prices[i]){
-		priceVar=prices[i].children[0].data;	
+		priceVar=carsFor[i].title;	
 		priceVar=priceVar.trim();
 		}else{
 		priceVar="-";	
 		priceVar=priceVar.trim();
 		}
-		placeVar=places[i].children[1].children[0].data+' - '+places[i].children[3].children[0].data;
+		placeVar=carsFor[i].title+' - '+carsFor[i].title;
 		placeVar=placeVar.trim();
-		dateVar=dates[i].children[0].data;
+		dateVar=carsFor[i].title;
 		dateVar=dateVar.trim();
 		 arr.push({
                   image:imageVar,
